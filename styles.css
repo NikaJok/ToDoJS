@@ -1,0 +1,24 @@
+body
+{
+background: url(back.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh; 
+}
+.wrapper{
+height: 100%;
+background: rgba(255, 255, 255, 0.17);
+}
+.topHeader{
+    margin-top: 0;
+    padding-top: 20px;
+}
+.collection.with-header .collection-header{
+background: rgba(225, 225, 225, 0.7);
+}
+.collection .collection-item{
+background: rgba(225, 225, 225, 0.7);
+}
+.secondary-content{
+color: rgb(225, 30, 0)
+}
