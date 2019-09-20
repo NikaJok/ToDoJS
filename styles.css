@@ -22,3 +22,7 @@ background: rgba(225, 225, 225, 0.7);
 .secondary-content{
 color: rgb(225, 30, 0)
 }
+.form{
+    background: rgba(225, 225, 225, 0.7);
+    padding: 0 2rem 0;    
+}
