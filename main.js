@@ -1,5 +1,8 @@
 const addForm = document.querySelector(`.form`);
 const addUl= document.querySelector(`#ulList`);
+const addSearch = document.getElementById(`search`);
+
+
 
 addForm.addEventListener('submit', e => {
     const valueInput = addForm.todo.value;
@@ -18,17 +21,26 @@ const generateTodoHtml = (inputLi) =>{
     }
 }
 
+
 addUl.addEventListener('click', e =>{
     if(e.target.classList.contains('box') === true){
       e.target.parentNode.parentElement.parentElement.remove();
    }
 })
-    //const delLi = document.querySelectorAll(`.secondary-content`);
-    // delLi.forEach( (index,delLi) => {
-    //     const deleteLi = index;
-    //     deleteLi.addEventListener('click', e =>{
-    //        e.target.parentNode.parentElement.parentElement.remove();
-    //        console.log('click');
-    //     })
-    // })
-    // console.log(delLi);
+
+
+addSearch.addEventListener('keyup', e => {
+    const valueInput = addSearch.value;
+
+    liSearch(valueInput);
+    
+});
+
+const liSearch = (value) => {
+    console.log(value);
+    const arrayList = Array.from(addUl.children);
+    let filterItems = arrayList.filter(item => !item.textContent.includes(value))
+    .forEach(e => e.classList.add('filtered'))
+    filterItems = arrayList.filter(item => item.textContent.includes(value))
+    .forEach(e => e.classList.remove('filtered'))
+}
